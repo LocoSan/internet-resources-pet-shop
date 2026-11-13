@@ -1,6 +1,8 @@
 # Магазин домашних животных
 
-Работа 6, вариант 9. API каталога: виды, породы, животные.
+Работы 6 и 7, вариант 9. API и интерфейс каталога: виды, породы, животные.
+
+Метки Git: `lab-06` — API; `lab-07` — API и клиент.
 
 ## Запуск
 
@@ -29,9 +31,23 @@ python -m venv .venv
 
 У каждой записи есть адрес с её номером, например `/api/pets/1/`. Списки показывают по пять записей; параметр `?page=2` открывает следующую страницу.
 
+## Интерфейс
+
+Оставьте Django запущенным. В другом окне PowerShell из папки проекта:
+
+```powershell
+cd frontend
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Нужны Node.js 22.13 или новее и pnpm 11. Откройте [клиент](http://localhost:5173/) и войдите тем же логином и паролем. Чтобы добавить животное в пустой каталог, сначала создайте вид и породу.
+
 ## Проверки
 
 ```powershell
 .\.venv\Scripts\python.exe manage.py test
-.\.venv\Scripts\python.exe manage.py spectacular --validate --fail-on-warn
+.\.venv\Scripts\python.exe manage.py spectacular --validate --fail-on-warn --file "$env:TEMP\petshop-schema.yaml"
+cd frontend
+pnpm build
 ```

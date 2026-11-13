@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f3f7f5; color: #182e28; font: 16px/1.5 system-ui, sans-serif; }
+a { color: #166650; }
+header { background: #134c3d; color: white; }
+.header-content, main { max-width: 880px; margin: auto; padding: 1rem; }
+.header-content, .account, nav, .actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+.header-content { justify-content: space-between; }
+.brand { color: white; font-weight: 700; text-decoration: none; }
+nav { margin-bottom: 1rem; }
+nav a { border-radius: .4rem; padding: .35rem .65rem; }
+nav a.router-link-active { background: #dcece5; font-weight: 700; }
+.panel { padding: clamp(1rem, 3vw, 2rem); border: 1px solid #d8e5df; border-radius: .75rem; background: white; }
+.login { max-width: 420px; margin: 2rem auto; }
+h1 { margin-top: 0; font-size: 1.6rem; overflow-wrap: anywhere; }
+form { display: grid; gap: .75rem; max-width: 450px; justify-items: start; }
+label { width: 100%; display: grid; gap: .25rem; font-weight: 600; }
+input, select, textarea { min-width: 0; width: 100%; font: inherit; padding: .45rem .6rem; border: 1px solid #9dafaa; border-radius: .35rem; background: white; }
+button, .button { border: 0; border-radius: .4rem; padding: .45rem .8rem; font: inherit; text-decoration: none; color: white; background: #186550; cursor: pointer; }
+button:disabled { opacity: .55; cursor: default; }
+button.secondary { background: #e8f4ee; color: #134c3d; }
+button.danger { background: #98362d; }
+.notice, .error { padding: .65rem .8rem; border-radius: .4rem; overflow-wrap: anywhere; }
+.notice { background: #e1f4e9; }
+.error { background: #ffebe7; color: #81251d; }
+.records { margin: .8rem 0; padding: 0; list-style: none; }
+.records li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; padding: .6rem 0; border-bottom: 1px solid #d8e5df; overflow-wrap: anywhere; }
+dt { font-weight: 600; }
+dd { margin: 0 0 .55rem; overflow-wrap: anywhere; white-space: pre-wrap; }
+.back { display: inline-block; margin-top: 1rem; }
